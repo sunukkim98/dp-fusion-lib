@@ -3,28 +3,11 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dp-fusion-lib"
+name = "fusit"
 version = "0.1.0"
 description = "Token-Level Differentially Private Inference for Large Language Models"
 readme = "README.md"
-license = {file = "LICENSE"}
-authors = [
-    {name = "Rushil Thareja", email = "rushil.thareja@mbzuai.ac.ae"}
-]
 keywords = ["differential-privacy", "llm", "text-generation", "privacy", "nlp", "renyi-divergence"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "Intended Audience :: Science/Research",
-    "License :: Other/Proprietary License",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "Topic :: Security",
-]
 requires-python = ">=3.8"
 
 dependencies = [
@@ -48,13 +31,6 @@ docs = [
     "mkdocstrings[python]>=0.24.0",
 ]
 
-[project.urls]
-Homepage = "https://github.com/rushil-thareja/dp-fusion-lib"
-Documentation = "https://rushil-thareja.github.io/dp-fusion-lib"
-Repository = "https://github.com/rushil-thareja/dp-fusion-lib"
-Issues = "https://github.com/rushil-thareja/dp-fusion-lib/issues"
-Paper = "https://arxiv.org/abs/2507.04531"
-
 [tool.setuptools.packages.find]
 where = ["src"]
 
@@ -69,4 +45,4 @@ select = ["E", "F", "I", "N", "W"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = "-v --cov=dp_fusion_lib --cov-report=term-missing"
+addopts = "-v --cov=fusit --cov-report=term-missing"

@@ -3,7 +3,7 @@
 import math
 import pytest
 
-from dp_fusion_lib import compute_epsilon_single_group, compute_dp_epsilon
+from fusit import compute_epsilon_single_group, compute_dp_epsilon
 
 
 class TestComputeEpsilonSingleGroup:

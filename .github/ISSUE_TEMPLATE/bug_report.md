@@ -15,7 +15,7 @@ A clear description of the bug.
 - Python version:
 - PyTorch version:
 - Transformers version:
-- dp-fusion-lib version:
+- fusit version:
 - OS:
 - GPU (if applicable):
 
@@ -23,7 +23,7 @@ A clear description of the bug.
 
 ```python
 # Minimal code to reproduce the issue
-from dp_fusion_lib import DPFusion
+from fusit import DPFusion
 
 # ...
 ```

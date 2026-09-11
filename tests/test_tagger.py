@@ -2,7 +2,7 @@
 
 import pytest
 
-from dp_fusion_lib import find_phrase_offsets
+from fusit import find_phrase_offsets
 
 
 class TestFindPhraseOffsets:

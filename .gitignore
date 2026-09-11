@@ -83,3 +83,7 @@ MANIFEST
 # Claude Code personal config
 CLAUDE.md
 .claude/
+todo.md
+
+# Reproduction study (not part of the published library)
+repro/

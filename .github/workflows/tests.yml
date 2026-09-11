@@ -33,11 +33,11 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests/ -v --cov=dp_fusion_lib --cov-report=term-missing
+          pytest tests/ -v --cov=fusit --cov-report=term-missing
 
       - name: Check import works
         run: |
-          python -c "from dp_fusion_lib import DPFusion, Tagger, compute_epsilon_single_group; print('Import successful')"
+          python -c "from fusit import DPFusion, Tagger, compute_epsilon_single_group; print('Import successful')"
 
   lint:
     runs-on: ubuntu-latest
@@ -56,8 +56,8 @@ jobs:
 
       - name: Check formatting with black
         run: |
-          black --check src/ tests/ examples/
+          black --check src/ tests/
 
       - name: Lint with ruff
         run: |
-          ruff check src/ tests/ examples/
+          ruff check src/ tests/

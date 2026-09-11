@@ -21,8 +21,8 @@ from typing import Dict, List, Optional, Union
 
 import torch
 
-from dp_fusion_lib.tagger import Tagger, find_phrase_offsets
-from dp_fusion_lib.utils import (
+from fusit.tagger import Tagger, find_phrase_offsets
+from fusit.utils import (
     dp_fusion_groups_incremental,
     format_prompt_new_template,
     replace_sequences_with_placeholder_fast,
@@ -44,7 +44,7 @@ class DPFusion:
 
     Example (Message-based with Tagger):
         >>> from transformers import AutoModelForCausalLM, AutoTokenizer
-        >>> from dp_fusion_lib import DPFusion, Tagger
+        >>> from fusit import DPFusion, Tagger
         >>>
         >>> model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
         >>> tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
@@ -455,7 +455,7 @@ def generate_dp_text(
 
     Example:
         >>> from transformers import AutoModelForCausalLM, AutoTokenizer
-        >>> from dp_fusion_lib import generate_dp_text
+        >>> from fusit import generate_dp_text
         >>>
         >>> model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
         >>> tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")

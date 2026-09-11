@@ -1,5 +1,5 @@
 """
-DP-Fusion-Lib: Token-Level Differentially Private Inference for LLMs
+fusit: Token-Level Differentially Private Inference for LLMs
 
 Generate text with formal (epsilon, delta)-differential privacy guarantees
 using distribution fusion techniques.
@@ -11,7 +11,7 @@ This library implements the DP-Fusion algorithm from:
 
 Quick Start:
     >>> from transformers import AutoModelForCausalLM, AutoTokenizer
-    >>> from dp_fusion_lib import DPFusion, compute_epsilon_single_group
+    >>> from fusit import DPFusion, compute_epsilon_single_group
     >>>
     >>> model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
     >>> tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
@@ -44,13 +44,13 @@ except ImportError as e:
     ) from e
 
 # Core classes and functions
-from dp_fusion_lib.core import DPFusion, generate_dp_text
-from dp_fusion_lib.tagger import Tagger, find_phrase_offsets
-from dp_fusion_lib.epsilon import compute_epsilon_single_group, compute_dp_epsilon
-from dp_fusion_lib._version import __version__
+from fusit.core import DPFusion, generate_dp_text
+from fusit.tagger import Tagger, find_phrase_offsets
+from fusit.epsilon import compute_epsilon_single_group, compute_dp_epsilon
+from fusit._version import __version__
 
 # Utility functions (advanced usage)
-from dp_fusion_lib.utils import (
+from fusit.utils import (
     compute_renyi_divergence_clipped_symmetric,
     find_lambda,
     replace_sequences_with_placeholder_fast,

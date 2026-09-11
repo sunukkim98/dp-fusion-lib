@@ -1,1 +1,1 @@
-"""Tests for dp-fusion-lib."""
+"""Tests for fusit."""

@@ -1,4 +1,4 @@
-"""Pytest configuration and fixtures for dp-fusion-lib tests."""
+"""Pytest configuration and fixtures for fusit tests."""
 
 import pytest
 

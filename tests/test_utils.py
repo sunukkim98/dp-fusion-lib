@@ -3,7 +3,7 @@
 import pytest
 import torch
 
-from dp_fusion_lib import (
+from fusit import (
     compute_renyi_divergence_clipped_symmetric,
     find_lambda,
 )
